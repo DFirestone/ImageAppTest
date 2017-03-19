@@ -20,24 +20,28 @@ namespace ImageAppTest
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+            // Tworzenie okna otwierania nowego pliku
             OpenFileDialog opFile = new OpenFileDialog();
             opFile.Title = "Select a Image";
             opFile.Filter = "jpg files (*.jpg)|*.jpg|All Files (*.*)|*.*";
 
+            // Tworzenie ścieżki i folderu na obrazy - jeżeli nie istnieje
             string appPath = Path.GetDirectoryName(Application.ExecutablePath) + @"\ProImages\";
-            if (Directory.Exists(appPath) == false)                                              // <---
-            {                                                                                    // <---
-                Directory.CreateDirectory(appPath);                                              // <---
+            if (Directory.Exists(appPath) == false)
+            {
+                Directory.CreateDirectory(appPath);
             }
 
+            // Otwieranie okna i zapisanie pliku w folderze
             if (opFile.ShowDialog() == DialogResult.OK)
             {
                 try
                 {
-                    string iName = opFile.SafeFileName;   // <---
-                    string filepath = opFile.FileName;    // <---
+                    string iName = opFile.SafeFileName;
+                    string filepath = opFile.FileName;
                     if (!File.Exists(filepath))
-                        File.Copy(filepath, appPath + iName); // <---
+                        File.Copy(filepath, appPath + iName);
                     Bitmap Image = new Bitmap(appPath + iName);
                     pictureBox1.Image = Image;
                 }
