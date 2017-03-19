@@ -20,40 +20,53 @@ namespace ImageAppTest
 
         private void button1_Click(object sender, EventArgs e)
         {
-
             // Tworzenie okna otwierania nowego pliku
             OpenFileDialog opFile = new OpenFileDialog();
+            // Ustawienie nazwy okna
             opFile.Title = "Select a Image";
-            opFile.Filter = "jpg files (*.jpg)|*.jpg|All Files (*.*)|*.*";
+            // Ustawienie filtrów - w postaci stringa: "nazwa wyświetlana | format (np.: *.jpg)
+            opFile.Filter = "jpg files (*.jpg)|*.jpg|All files (*.*)|*.*";
 
             // Tworzenie ścieżki i folderu na obrazy - jeżeli nie istnieje
-            string appPath = Path.GetDirectoryName(Application.ExecutablePath) + @"\ProImages\";
-            if (Directory.Exists(appPath) == false)
+            string imageDirectoryPath = Path.GetDirectoryName(Application.ExecutablePath) + @"\Obrazy\";
+            if (Directory.Exists(imageDirectoryPath) == false)
             {
-                Directory.CreateDirectory(appPath);
+                Directory.CreateDirectory(imageDirectoryPath);
             }
 
             // Otwieranie okna i zapisanie pliku w folderze
             if (opFile.ShowDialog() == DialogResult.OK)
             {
+                // blok w którym może wystąpić wyjątek przy kopiowaniu pliku do naszego folderu Obrazy
+                // wyjątek - błąd w czasie działania programu
                 try
                 {
-                    string iName = opFile.SafeFileName;
+                    // nazwa kopiowanego pliku - bez ścieżki
+                    string imageName = opFile.SafeFileName;
+                    // ścieżka kopiowanego pliku wraz z nazwą
                     string filepath = opFile.FileName;
-                    if (!File.Exists(filepath))
-                        File.Copy(filepath, appPath + iName);
-                    Bitmap Image = new Bitmap(appPath + iName);
+                    // jeżeli plik plik nie istnieje (nie został już wcześniej skopiowany)
+                    // kopiujemy go do folderu Obrazy pod nazwą kryjcą się w zmiennej imageName
+                    if (File.Exists(imageDirectoryPath + imageName) == false)
+                        File.Copy(filepath, imageDirectoryPath + imageName);
+
+                    // tworzymy bitmapę na świeżo skopiowany obrazek - w konstruktorze podajemy ścieżkę do obrazu w folderze Obrazy
+                    Bitmap Image = new Bitmap(imageDirectoryPath + imageName);
+                    // ustawiamy obraz PictureBoxa na załadowaną Bitmapę
                     pictureBox1.Image = Image;
                 }
-                catch (Exception exp)
+                catch (Exception exp) // łapiemy wyjątek i obsługujemy go
                 {
+                    // obsługujemy wyjątek poprzez wyświetlenie MessageBoxa z komunikatem i informacją szczegółową o wyłapanym wyjątku
                     MessageBox.Show("Unable to open file " + exp.Message);
                 }
             }
             else
             {
+                // jeżeli nie zaakceptujemy obrazka zamykamy okno
                 opFile.Dispose();
             }
+
         }
     }
 }
