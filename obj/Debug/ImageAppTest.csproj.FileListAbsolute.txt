@@ -1,0 +1,9 @@
+C:\Users\Konrad\Documents\Visual Studio 2015\Projects\ImageAppTest\ImageAppTest\bin\Debug\ImageAppTest.exe.config
+C:\Users\Konrad\Documents\Visual Studio 2015\Projects\ImageAppTest\ImageAppTest\bin\Debug\ImageAppTest.exe
+C:\Users\Konrad\Documents\Visual Studio 2015\Projects\ImageAppTest\ImageAppTest\bin\Debug\ImageAppTest.pdb
+C:\Users\Konrad\Documents\Visual Studio 2015\Projects\ImageAppTest\ImageAppTest\obj\Debug\ImageAppTest.csprojResolveAssemblyReference.cache
+C:\Users\Konrad\Documents\Visual Studio 2015\Projects\ImageAppTest\ImageAppTest\obj\Debug\ImageAppTest.Form1.resources
+C:\Users\Konrad\Documents\Visual Studio 2015\Projects\ImageAppTest\ImageAppTest\obj\Debug\ImageAppTest.Properties.Resources.resources
+C:\Users\Konrad\Documents\Visual Studio 2015\Projects\ImageAppTest\ImageAppTest\obj\Debug\ImageAppTest.csproj.GenerateResource.Cache
+C:\Users\Konrad\Documents\Visual Studio 2015\Projects\ImageAppTest\ImageAppTest\obj\Debug\ImageAppTest.exe
+C:\Users\Konrad\Documents\Visual Studio 2015\Projects\ImageAppTest\ImageAppTest\obj\Debug\ImageAppTest.pdb

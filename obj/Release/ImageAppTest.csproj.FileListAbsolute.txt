@@ -1,0 +1,8 @@
+C:\Users\Konrad\Documents\Visual Studio 2015\Projects\ImageAppTest\ImageAppTest\bin\Release\ImageAppTest.exe.config
+C:\Users\Konrad\Documents\Visual Studio 2015\Projects\ImageAppTest\ImageAppTest\bin\Release\ImageAppTest.exe
+C:\Users\Konrad\Documents\Visual Studio 2015\Projects\ImageAppTest\ImageAppTest\bin\Release\ImageAppTest.pdb
+C:\Users\Konrad\Documents\Visual Studio 2015\Projects\ImageAppTest\ImageAppTest\obj\Release\ImageAppTest.Form1.resources
+C:\Users\Konrad\Documents\Visual Studio 2015\Projects\ImageAppTest\ImageAppTest\obj\Release\ImageAppTest.Properties.Resources.resources
+C:\Users\Konrad\Documents\Visual Studio 2015\Projects\ImageAppTest\ImageAppTest\obj\Release\ImageAppTest.csproj.GenerateResource.Cache
+C:\Users\Konrad\Documents\Visual Studio 2015\Projects\ImageAppTest\ImageAppTest\obj\Release\ImageAppTest.exe
+C:\Users\Konrad\Documents\Visual Studio 2015\Projects\ImageAppTest\ImageAppTest\obj\Release\ImageAppTest.pdb
